@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Message for you</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop hidden>
+    <source src="lagu.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Main Content -->
+  <div class="wrapper"> 
+    <h2 class="question">You like me bubb adinn?</h2> 
+    <img class="gif" alt="gif" src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gifyou.webp"> 
+    <div class="btn-group"> 
+      <button class="yes-btn">Yes</button> 
+      <button class="no-btn">No</button> 
+    </div> 
+  </div> 
+
+  <!-- Script untuk memutar musik setelah klik -->
+  <script>
+    const audio = document.getElementById("bg-music");
+    document.addEventListener("click", () => {
+      audio.play().catch((e) => {
+        console.log("Autoplay gagal: ", e);
+      });
+    });
+  </script>
+
+  <script src="script.js"></script> 
+</body>
+</html>
